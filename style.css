@@ -1,24 +1,14 @@
+
 body{
-    background-image: url("img/VenusPleiades.jpg");
+    background-image: url("img/sky1.jpg");
+    background-size: cover;
+    overflow-x: hidden;
 }
 
-header{
-    text-align: center;
-    margin-bottom: 50px;
+h1{
     color: white;
 }
 
-.input-field{
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 50px;
-    max-width: 500px;
-}
-
-.card{
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 10px;
-    text-align: center;
-    background-color: white;
+h4{
+    color: white;
 }

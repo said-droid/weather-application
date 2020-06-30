@@ -5,56 +5,133 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
 
-<header>
-    <h1>The weather application</h1>
-</header>
+<div class="container-fluid">
 
-<div class="input-group input-field">
-    <input type="text" class="form-control" id="city" placeholder="" aria-label="" aria-describedby="basic-addon1">
-    <div class="input-group-append">
-        <button class="btn btn-success" type="button" id="run">GO</button>
-    </div>
+    <section id="head" class="row d-flex flex-column bg-info">
+        <h1 class="text-center pt-5 pt-4">
+         Find out the weather in every city.
+        </h1>
+        <section class="p-4">
+            <form action="#">
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <input type="text" id="city" class="form-control form-control-lg rounded-0 border-0"
+                               placeholder="Enter city...">
+                    </div>
+                    <div>
+                        <button id="btn-search" class="btn btn-info btn-lg border border-white rounded-0" type="submit">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </section>
+
+    <section class="row container d-flex flex-column m-auto">
+
+        <div class="row p-4 ">
+            <h4>Today and the upcoming 4days</h4>
+        </div>
+
+        <div id="result" class="row p-2">
+            <section class="day col-12 col-md-6 pb-5">
+                <ul class="list-unstyled text-center">
+                    <li class="date"></li>
+                    <li>
+                        <img class="icon" src="https://via.placeholder.com/100" alt="wheather-img">
+                    </li>
+                    <li class="description"></li>
+                    <li><span class="temp h1"></span></li>
+                    <li><i><img class="icon-s" src="img/icons-temp.png" alt="icon-temp"></i>
+                        <span class="temp-min"></span> / <span class="temp-max"></span></li>
+                    <li><i><img class="icon-s" src="img/icons-humid-48.png" alt="icon-humidity"></i>
+                        <span class="humidity"></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="day col-12 col-md-6 pb-5">
+                <ul class="list-unstyled text-center">
+                    <li class="date"></li>
+                    <li>
+                        <img class="icon" src="https://via.placeholder.com/100" alt="wheather-img">
+                    </li>
+                    <li class="description"></li>
+                    <li><span class="temp h1"></span></li>
+                    <li><i><img class="icon-s" src="img/icons-temp.png" alt="icon-temp"></i>
+                        <span class="temp-min"></span> / <span class="temp-max"></span></li>
+                    <li><i><img class="icon-s" src="img/icons-humid-48.png" alt="icon-humidity"></i>
+                        <span class="humidity"></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="day col-12 col-md-4 pb-5">
+                <ul class="list-unstyled text-center">
+                    <li class="date"></li>
+                    <li>
+                        <img class="icon" src="https://via.placeholder.com/100" alt="wheather-img">
+                    </li>
+                    <li class="description"></li>
+                    <li><span class="temp h1"></span></li>
+                    <li><i><img class="icon-s" src="img/icons-temp.png" alt="icon-temp"></i>
+                        <span class="temp-min"></span> / <span class="temp-max"></span></li>
+                    <li><i><img class="icon-s" src="img/icons-humid-48.png" alt="icon-humidity"></i>
+                        <span class="humidity"></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="day col-12 col-md-4 pb-5">
+                <ul class="list-unstyled text-center">
+                    <li class="date"></li>
+                    <li>
+                        <img class="icon" src="https://via.placeholder.com/100" alt="wheather-img">
+                    </li>
+                    <li class="description"></li>
+                    <li><span class="temp h1"></span></li>
+                    <li><i><img class="icon-s" src="img/icons-temp.png" alt=""></i><span class="temp-min"></span> /
+                        <span class="temp-max"></span></li>
+                    <li><i><img class="icon-s" src="img/icons-humid-48.png" alt=""></i><span class="humidity"></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="day col-12 col-md-4 pb-5">
+                <ul class="list-unstyled text-center">
+                    <li class="date"></li>
+                    <li>
+                        <img class="icon" src="https://via.placeholder.com/100" alt="wheather-img">
+                    </li>
+                    <li class="description"></li>
+                    <li><span class="temp h1"></span></li>
+                    <li><i><img class="icon-s" src="img/icons-temp.png" alt="icon-temp"></i>
+                        <span class="temp-min"></span> / <span class="temp-max"></span></li>
+                    <li><i><img class="icon-s" src="img/icons-humid-48.png" alt="icon-humidity"></i>
+                        <span class="humidity"></span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+    </section>
 </div>
-
-
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-    <div class="card-body">
-        <a href="#" class="card-link">tomorrow</a>
-        <a href="#" class="card-link">next</a>
-        <a href="#" class="card-link">next</a>
-        <a href="#" class="card-link">next</a>
-
-    </div>
-</div>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </body>
