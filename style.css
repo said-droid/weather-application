@@ -1,14 +1,7 @@
-
-body{
-    background-image: url("img/sky1.jpg");
-    background-size: cover;
-    overflow-x: hidden;
-}
-
-h1{
+*{
     color: white;
 }
 
-h4{
-    color: white;
+#head{
+    background-color: black;
 }
