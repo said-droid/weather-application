@@ -70,28 +70,27 @@ function getModeVal(array, val) {
     return modeVal
 }
 
-window.addEventListener('load', (event) => { // When the page is loaded, hide the result part
+window.addEventListener('load', (event) => { // When the page is loaded, hide results
     document.getElementById("result").style.visibility = 'hidden';
 });
 
 document.getElementById("btn-search").addEventListener("click", function () {
 
-    // Take input and capitalize the first letter
+    // capitalize the first letter
     let city = document.getElementById("city").value;
     city = city.charAt(0).toUpperCase() + city.slice(1);
 
-    // fetch API data with URL(made by the city name)
+    // fetch API data
     fetch(" https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=ce24f6ae35615d5b8208834c2524de00")
 
         .then(function (response) {
-            if (response.ok === false) {     // fail to fetch => error. go to .catch part
+            if (response.ok === false) {     
                 throw('Enter valid city');
             }
             return response.json();
         })
 
         .then(data => {
-            // Show the result part and display city name in the 1st line of the result
             document.getElementById("result").style.visibility = 'visible';
 
             // get the dates of the 5 days from today
@@ -103,7 +102,7 @@ document.getElementById("btn-search").addEventListener("click", function () {
                 date.push(day.toDateString());
             }
 
-            // Sort the lists of the data according to the date
+            // Sort lists of data according to date
             let listD0 = [], listD1 = [], listD2 = [], listD3 = [], listD4 = [];
 
             data.list.forEach(function (list) {
@@ -131,7 +130,7 @@ document.getElementById("btn-search").addEventListener("click", function () {
                 }
             });
 
-            // Calculate and display the forecast info per date
+            // Calculate and display the forecast per date
             let future = [listD0, listD1, listD2, listD3, listD4];
 
             for(let i=1; i<future.length; i++){
